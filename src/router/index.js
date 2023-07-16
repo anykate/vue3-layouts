@@ -1,7 +1,12 @@
+import { defineAsyncComponent } from 'vue'
 import { createRouter, createWebHistory } from 'vue-router'
 
-import AdminLayout from '@/layouts/AdminLayout.vue'
-import DefaultLayout from '@/layouts/DefaultLayout.vue'
+const DefaultLayout = defineAsyncComponent(() =>
+  import('@/layouts/DefaultLayout.vue')
+)
+const AdminLayout = defineAsyncComponent(() =>
+  import('@/layouts/AdminLayout.vue')
+)
 
 const routes = [
   {
